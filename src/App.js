@@ -1,5 +1,5 @@
-import './App.css';
 import Pages from './components/home/pages/Pages';
+import './style/main.scss';
 
 function App() {
   return (
@@ -10,3 +10,4 @@ function App() {
 }
 
 export default App;
+
