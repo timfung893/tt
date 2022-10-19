@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../assets/images/logo.svg';
 import { BiSearch } from "react-icons/bi";
 import { BsBagCheck } from "react-icons/bs";
@@ -8,20 +8,28 @@ import { navlist } from '../assets/data/data';
 import { Link } from 'react-router-dom';
 
 function Header(props) {
+    // set state for mobile menu
+    const [mobile, setMobile] = useState(false);
+
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('.header')
+        header.classList.toggle('active', this.window.scrollY > 100)
+    })
+
     return (
-       <header>
+       <header className='header'>
             <div className="container">
                 <nav>
                     <div className="toggle">
-                        <button>
-                            Menu
+                        <button onClick={() => setMobile(!mobile)}>
+                            {mobile ? <AiOutlineClose className='close heIcon'/> : <AiOutlineMenu className='open heIcon'/>}
                         </button>
                     </div>
                     <div className="left">
                         <img src={logo} alt="" />
                     </div>
                     <div className="center">
-                        <ul className='menu'>
+                        <ul className={mobile ? 'mobile-nav' : 'menu'}>
                             {navlist.map((nav) => (
                                 <li key={nav.id}>
                                     <Link to={nav.path}>{nav.text}</Link>
@@ -44,6 +52,7 @@ function Header(props) {
                             <BsBagCheck className='shop heIcon' /> 
                             MY CART (0)     
                         </button>
+                        <div className="show-cart"></div>
                     </div>
                 </div>
             </div>
