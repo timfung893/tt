@@ -13,7 +13,7 @@ function Header(props) {
 
     window.addEventListener('scroll', function () {
         const header = document.querySelector('.header')
-        header.classList.toggle('active', this.window.scrollY > 100)
+        header.classList.toggle('active', this.window.scrollY > 70)
     })
 
     return (
