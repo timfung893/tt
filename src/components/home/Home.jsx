@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from './banner/Banner';
+import CardMain from './hero/CardMain';
 import Card from './hero/Card';
 import Hero from './hero/Hero';
 import Blog from './blog/Blog';
@@ -11,12 +12,15 @@ function Home(props) {
     return (
       <>
         <Hero />
-        <Card />
-        <Product />
-        <Banner />
-        <TopProducts />
-        <Blog />
-        <Location />
+        <div className="bg">
+          <CardMain />
+          <Card />
+          <Product />
+          <Banner />
+          <TopProducts />
+          <Blog />
+          <Location />
+        </div>
       </>
     );
 }

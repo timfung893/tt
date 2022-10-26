@@ -1,9 +1,11 @@
 header {
   @include pa_ma($md $xl-2, none);
+  position: sticky;
   box-shadow: rgba(0, 0, 0, 0.05) 1.95px 1.95px 2.6px;
   background-color: $primary;
-  display: none;
-
+  top: 0;
+  opacity: 0;
+  @include transition;
   .container {
     @include flex(center, center, center);
   }
@@ -17,7 +19,7 @@ header {
     @include pa_ma($sm 0 0 0, none);
 
     img {
-      width: 100px;
+      width: 50px;
     }
   }
   .heIcon {
@@ -30,10 +32,12 @@ header {
       @include pa_ma(none, 0 0 0 $xl-5);
       li {
         @include pa_ma(none, 0 0 0 $xl-2);
+
         a {
-          text-transform: uppercase;
-          font-size: $md;
           color: white;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          font-size: 12px;
           &:hover {
             padding: 15px;
             border-radius: 8px
@@ -109,11 +113,9 @@ header {
   }
 }
 header.active {
-  @include positions(sticky, 0, none, 0, none, none, 100%);
   box-shadow: 0 0 4px 0 rgb(115 115 115 / 20%);
   z-index: 9999;
   opacity: .9;
-  display: block;
 
   .showCart {
     @include positions(absolute, 110%, none, none, 20px, 450px, auto);

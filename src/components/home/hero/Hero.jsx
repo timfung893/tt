@@ -13,19 +13,26 @@ function Hero(props) {
         console.log('search', key);
     }
 
+    const setHeroTop =  () => {
+        const header = document.querySelector('header');
+        const hero= document.querySelector('.hero');
+        const headerHeight = header.offsetHeight + 'px';
+        hero.style.top =  '-' + headerHeight
+    }
+
     const showHeroHeading = () => {
         const hero = document.querySelector('.hero-heading')
         const hero2 = document.querySelector('.hero-heading-2')
         const hero3 = document.querySelector('.hero-heading-3')
         setTimeout(() => {
             hero.classList.add('show')
-        }, 3000);   
+        }, 500);   
         setTimeout(() => {
             hero2.classList.add('show')
-        }, 4000);   
+        }, 1000);   
         setTimeout(() => {
             hero3.classList.add('show')
-        }, 5000);   
+        }, 2000);   
     }
 
     document.addEventListener('click', () => {
@@ -35,6 +42,7 @@ function Hero(props) {
     
     useEffect(() => {
         showHeroHeading()
+        setHeroTop()
     },[])
 
     return (

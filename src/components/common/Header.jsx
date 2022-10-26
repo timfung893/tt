@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../assets/images/logo.svg';
+import logo from '../assets/images/icon.png';
 import { AiOutlineHeart, AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
 import { navlist } from '../assets/data/data';
 import { Link } from 'react-router-dom';
@@ -8,7 +8,12 @@ import { connect, useDispatch, useSelector } from 'react-redux';
 function Header(props) {
     window.addEventListener('scroll', function () {
         const header = document.querySelector('.header')
+        const hero= document.querySelector('.hero')
+        const story= document.querySelector('.cardmain')
+
         header.classList.toggle('active', this.window.scrollY > 70)
+        hero.classList.toggle('is-trans', this.window.scrollY > 70)
+        story.classList.toggle('active', this.window.scrollY > 70)
     })
     
     // set state for mobile menu

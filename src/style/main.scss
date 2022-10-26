@@ -16,6 +16,17 @@
 body {
   background: $light;
   font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: auto;
+}
+// .bg {
+//   background: url('../../public/images/hero/fl-bg.png');
+//   background-size: cover;
+// }
+img {
+  image-rendering: optimizequality;
+  image-rendering: -webkit-optimize-contrast;
 }
 a {
   @include default;
@@ -130,9 +141,13 @@ p {
 footer {
   text-align: center;
   @include pa_ma($xl-2, $large 0 0 0);
-  background: $dark;
+  background: $primary;
   p {
     color: $light;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
   }
 }
 /*.product,
