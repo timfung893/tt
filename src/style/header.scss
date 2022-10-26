@@ -1,9 +1,11 @@
 header {
   @include pa_ma($md $xl-2, none);
   box-shadow: rgba(0, 0, 0, 0.05) 1.95px 1.95px 2.6px;
+  background-color: $primary;
+  display: none;
 
   .container {
-    @include flex(center, space-between, center);
+    @include flex(center, center, center);
   }
   nav {
     @extend .container;
@@ -31,6 +33,11 @@ header {
         a {
           text-transform: uppercase;
           font-size: $md;
+          color: white;
+          &:hover {
+            padding: 15px;
+            border-radius: 8px
+          }
         }
       }
     }
@@ -105,7 +112,8 @@ header.active {
   @include positions(sticky, 0, none, 0, none, none, 100%);
   box-shadow: 0 0 4px 0 rgb(115 115 115 / 20%);
   z-index: 9999;
-  background: rgba(255, 255, 255, 0.8);
+  opacity: .9;
+  display: block;
 
   .showCart {
     @include positions(absolute, 110%, none, none, 20px, 450px, auto);

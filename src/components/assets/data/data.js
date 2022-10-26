@@ -7,8 +7,8 @@ export const navlist = [
     path: "/",
   },
   {
-    text: "shop",
-    path: "/shop",
+    text: "gallery",
+    path: "/gallery",
   },
   {
     text: "about us",
@@ -19,8 +19,8 @@ export const navlist = [
     path: "/blog",
   },
   {
-    text: "contact us",
-    path: "/contact",
+    text: "location",
+    path: "/location",
   },
 ]
 export const hero = [
@@ -228,26 +228,32 @@ export const price = [
     desc: "Beautifully simple project planning, 14 days of free trial.",
     list: [
       {
+        id: 1,
         para: "Demo Content Install",
         icon: <FcCheckmark />,
       },
       {
+        id: 2,
         para: "Theme Updates",
         icon: <FcCheckmark />,
       },
       {
+        id: 3,
         para: "Support And Updates",
         icon: <AiOutlineClose />,
       },
       {
+        id: 4,
         para: "Access All Themes",
         icon: <AiOutlineClose />,
       },
       {
+        id: 5,
         para: "All Themes For Life",
         icon: <AiOutlineClose />,
       },
       {
+        id: 6,
         para: "30 Days Money Back",
         icon: <AiOutlineClose />,
       },
@@ -357,7 +363,7 @@ export const blog = [
     id: 3,
     date: "October 27, 2021",
     title: "Perfect Quality Reasonable Price for Your",
-    category: "travle",
+    category: "travel",
     cover: "../images/blog/b3.jpg",
   },
   {

@@ -1,5 +1,5 @@
 @import "reset";
-@import "varibale";
+@import "variables";
 @import "config";
 @import "header";
 @import "hero";
@@ -11,6 +11,7 @@
 @import "responsive";
 @import "details";
 @import "searchItem";
+@import 'location';
 
 body {
   background: $light;
@@ -22,7 +23,7 @@ a {
   color: $dark;
   @include transition;
   &:hover {
-    color: $primary;
+    box-shadow: 0 0 4px 0 rgba(248, 241, 241, 0.973);
   }
 }
 input,
@@ -160,7 +161,7 @@ footer {
     &::after {
       content: "";
       @include positions(absolute, -50px, none, 0, none, 100%, 110vh);
-      background: rgba(#000000, 0.8);
+      background: rgba(#000000, 0.8); 
     }
   }
 }
