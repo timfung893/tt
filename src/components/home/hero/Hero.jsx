@@ -12,12 +12,12 @@ function Hero(props) {
         setValue(key)
         console.log('search', key);
     }
-
+    
     const setHeroTop =  () => {
-        const header = document.querySelector('header');
-        const hero= document.querySelector('.hero');
-        const headerHeight = header.offsetHeight + 'px';
-        hero.style.top =  '-' + headerHeight
+        const header = document.querySelector('header.header');
+        const hero = document.querySelector('.hero');
+        const headerHeight = header.offsetHeight + 30;
+        hero.style.top =  '-' + headerHeight + 'px'
     }
 
     const showHeroHeading = () => {
@@ -40,6 +40,7 @@ function Hero(props) {
     }, { once: true } )
     
     
+
     useEffect(() => {
         showHeroHeading()
         setHeroTop()

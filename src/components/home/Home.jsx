@@ -7,6 +7,8 @@ import Blog from './blog/Blog';
 import Product from './product/Product';
 import TopProducts from './topProduct/TopProducts';
 import Location from './Location';
+import Gallery from './Gallery';
+import WeddDetails from './WeddDetails';
 
 function Home(props) {
     return (
@@ -14,10 +16,9 @@ function Home(props) {
         <Hero />
         <div className="bg">
           <CardMain />
-          <Card />
+          <Gallery />
           <Product />
-          <Banner />
-          <TopProducts />
+          <WeddDetails/>
           <Blog />
           <Location />
         </div>

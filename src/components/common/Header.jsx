@@ -8,8 +8,8 @@ import { connect, useDispatch, useSelector } from 'react-redux';
 function Header(props) {
     window.addEventListener('scroll', function () {
         const header = document.querySelector('.header')
-        const hero= document.querySelector('.hero')
-        const story= document.querySelector('.cardmain')
+        const hero = document.querySelector('.hero')
+        const story = document.querySelector('.cardmain')
 
         header.classList.toggle('active', this.window.scrollY > 70)
         hero.classList.toggle('is-trans', this.window.scrollY > 70)

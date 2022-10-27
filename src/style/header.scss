@@ -34,7 +34,7 @@ header {
         @include pa_ma(none, 0 0 0 $xl-2);
 
         a {
-          color: white;
+          color: $text;
           text-transform: uppercase;
           letter-spacing: 3px;
           font-size: 12px;

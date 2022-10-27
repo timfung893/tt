@@ -12,7 +12,6 @@ function Product(props) {
             <section className="product">
                 <div className="container">
                     <Heading title='Trending Products' desc='Check out the hottest design of the week. These rising stars are worth your attention.' />
-
                     <ProductItem data={data} />
                 </div>
             </section>
