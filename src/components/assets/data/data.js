@@ -7,16 +7,12 @@ export const navlist = [
     path: "/",
   },
   {
+    text: "our story",
+    path: "/our-story",
+  },
+  {
     text: "gallery",
     path: "/gallery",
-  },
-  {
-    text: "about us",
-    path: "/about",
-  },
-  {
-    text: "blog",
-    path: "/blog",
   },
   {
     text: "location",

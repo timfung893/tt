@@ -39,8 +39,6 @@ function Hero(props) {
         document.getElementById('mungJungYan').play()
     }, { once: true } )
     
-    
-
     useEffect(() => {
         showHeroHeading()
         setHeroTop()
@@ -48,7 +46,7 @@ function Hero(props) {
 
     return (
       <>    
-        <section className="hero">
+        <section className="hero" id='home'>
             <video autoPlay muted loop>
                 <source src='videos/bg.mp4' type='video/mp4'/>
             </video>

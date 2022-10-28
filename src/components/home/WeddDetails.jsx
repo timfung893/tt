@@ -6,7 +6,7 @@ function WeddDetails(props) {
     return (
         <>
             <section className="weddetails">
-                <div className="overlay"></div>
+                <div className="overlay-bg"></div>
                 <Heading title='The Wed' desc=''/>
                 <p className='message'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, illo dicta rem possimus atque assumenda!</p>
                 <div className="wed-wrapper">

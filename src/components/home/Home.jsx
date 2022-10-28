@@ -1,14 +1,12 @@
 import React from 'react';
-import Banner from './banner/Banner';
 import CardMain from './hero/CardMain';
-import Card from './hero/Card';
 import Hero from './hero/Hero';
 import Blog from './blog/Blog';
-import Product from './product/Product';
-import TopProducts from './topProduct/TopProducts';
+import Gallery from './product/Gallery';
 import Location from './Location';
-import Gallery from './Gallery';
+import Story from './Story';
 import WeddDetails from './WeddDetails';
+import Celebrate from './Celebrate';
 
 function Home(props) {
     return (
@@ -16,11 +14,12 @@ function Home(props) {
         <Hero />
         <div className="bg">
           <CardMain />
-          <Gallery />
-          <Product />
+          <Story />
           <WeddDetails/>
+          <Gallery />
           <Blog />
           <Location />
+          <Celebrate />
         </div>
       </>
     );

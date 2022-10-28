@@ -3,7 +3,7 @@ import React from 'react';
 function CardMain(props) {
     return (
         <>
-            <section className="cardmain">
+            <section className="cardmain" id='ourstory'>
                 <p className='card-story'>Our Story</p>
             
                 <div className="container card-container">
@@ -26,11 +26,11 @@ function CardMain(props) {
                         </div>
                     </div>
                 </div>
-                <div className="card-icon">
-                    <hr className='end' />
-                    <p>XOXO</p>
-                </div>
             </section>
+            <div className="card-icon">
+                <hr className='end' />
+                <p>XOXO</p>
+            </div>
         </>
     );
 }
