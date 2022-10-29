@@ -7,16 +7,16 @@ export const navlist = [
     path: "/",
   },
   {
-    text: "our story",
-    path: "/our-story",
+    text: "chủ xị",
+    path: "/chu-xi",
   },
   {
-    text: "gallery",
-    path: "/gallery",
+    text: "ảnh",
+    path: "/anh",
   },
   {
-    text: "location",
-    path: "/location",
+    text: "địa điểm",
+    path: "/dia-diem",
   },
 ]
 export const hero = [

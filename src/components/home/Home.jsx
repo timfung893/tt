@@ -17,7 +17,6 @@ function Home(props) {
           <Story />
           <WeddDetails/>
           <Gallery />
-          <Blog />
           <Location />
           <Celebrate />
         </div>

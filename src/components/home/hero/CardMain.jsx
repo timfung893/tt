@@ -4,25 +4,28 @@ function CardMain(props) {
     return (
         <>
             <section className="cardmain" id='ourstory'>
-                <p className='card-story'>Our Story</p>
-            
+                <p className='card-story'>Sau 2 năm, 11 tháng, 27 ngày...</p>
                 <div className="container card-container">
                     <div className="left">
-                        <img src="../images/blog/b1.jpg" alt="" />
+                        <img src="../images/banner/thao.jpg" alt="" />
                         <div className="name">
-                            <h2>Lorem, ipsum.</h2>
-                            <p>Lorem, ipsum.</p>
+                            <h2>Phương Thảo</h2>
+                            <p>2x tuổi (x đại học)</p>
+                            <p>Mê Vương Phi, Vương Gia Vệ</p>
+                            <p>Nhưng đồ ăn tới là mọi thứ mặc kệ</p>
                         </div>
                     </div>
                     <div className="center">
                         <img className='center-img' src="../images/hero/fl-frame.jpg" alt="" />
-                        <p>We'll seal the deal!</p> 
+                        <p>Cuối cùng <br></br>cũng chốt kèo :)</p> 
                     </div>
                     <div className="right">
-                    <img src="../images/blog/b2.jpg" alt="" />
+                    <img src="../images/banner/thinh2.jpg" alt="" />
                         <div className="name">
-                            <h2>Lorem, ipsum.</h2>
-                            <p>Lorem, ipsum.</p>
+                            <h2>Trường Thịnh</h2>
+                            <p>2x tuổi (x đại học)</p>
+                            <p>Mê em</p>
+                            <p>Nhưng mê xe, mê game hơn cả keke</p>
                         </div>
                     </div>
                 </div>

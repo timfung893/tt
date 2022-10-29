@@ -35,9 +35,9 @@ function Hero(props) {
         }, 2000);   
     }
 
-    document.addEventListener('click', () => {
-        document.getElementById('mungJungYan').play()
-    }, { once: true } )
+    // document.addEventListener('click', () => {
+    //     document.getElementById('mungJungYan').play()
+    // }, { once: true } )
     
     useEffect(() => {
         showHeroHeading()
@@ -55,13 +55,13 @@ function Hero(props) {
             </audio>
             <div className="container hero-container">
                 <h1 className='hero-heading'>
-                    <label htmlFor="">Lorem ipsum dolor sit amet.</label>
+                    <label htmlFor="">Thịnh</label>
                 </h1>
                 <h1 className='hero-heading-2'>
-                    <label htmlFor="">Lorem ipsum</label>
+                    <label htmlFor="">&</label>
                 </h1>
                 <h1 className='hero-heading-3'>
-                <label htmlFor="">Lorem ipsum dolor sit amet.</label>
+                <label htmlFor="">Thảo</label>
                 </h1>
                 <p>Save The Date</p>
             </div>

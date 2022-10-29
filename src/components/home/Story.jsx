@@ -37,14 +37,12 @@ function Story(props) {
         autoplaySpeed: 3000,
         pauseOnHover: true,
         cssEase: "linear",
-        prevArrow: <SamplePrevArrow/>,
-        nextArrow: <SampleNextArrow/>
     }
 
     return (
         <>
             <section className="storyslider" id='storyslider'>
-                <Heading title='' desc='Check out the hottest design of the week. These rising stars are worth your attention.'/>
+                <Heading title='' desc='Mọi chuyện bắt đầu từ đây...'/>
                 <Slider {...settings}>
                     {data.slice(0,5).map((item) => (
                         <div className="photo" key={item.id}>

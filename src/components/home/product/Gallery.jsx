@@ -11,9 +11,9 @@ function Gallery(props) {
         <>
             <section className="gallery" id='gallery'>
                 <div className="container">
-                    <Heading title='Gallery' desc='Check out the hottest design of the week. These rising stars are worth your attention.' />
-
+                    <Heading title='Ảnh' desc='Cho mọi người xem chơi...' />
                     <ProductItem data={data} />
+                    <Heading title='' desc='Còn nữa, nhưng để dành nha keke...' />
                 </div>
             </section>
         </>

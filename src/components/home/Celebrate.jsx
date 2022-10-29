@@ -6,7 +6,7 @@ function Celebrate(props) {
         <>
             <section className="celebrate">
                 <div className="heading">
-                    <h2>Your presence would be our honor
+                    <h2>Hẹn gặp mọi người!
                     </h2>
                 </div>
             </section>

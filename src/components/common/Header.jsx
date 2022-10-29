@@ -39,7 +39,7 @@ function Header(props) {
         $(".ourstory").click(() => {
             $("html, body").animate(
               {
-                scrollTop: $("#ourstory").offset().top - 150,
+                scrollTop: $("#ourstory").offset().top - 200,
               },
               1000
             );
@@ -88,13 +88,13 @@ function Header(props) {
                                 <a href='#home' className='link home'>home</a>
                             </li>
                             <li>
-                                <a href='#ourstory' className='link ourstory'>our story</a>
+                                <a href='#ourstory' className='link ourstory'>chủ xị</a>
                             </li>
                             <li>
-                                <a href='#gallery' className='link gallery'>gallery</a>
+                                <a href='#gallery' className='link gallery'>ảnh</a>
                             </li>
                             <li>
-                                <a href='#location' className='link location'>location</a>
+                                <a href='#location' className='link location'>địa điểm</a>
                             </li>
                         </ul>
                     </div>

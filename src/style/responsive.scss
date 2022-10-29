@@ -12,6 +12,7 @@
     .center {
       ul {
         display: none;
+        transition: all .3s ease-in-out;
       }
 
       .mobile-nav {
@@ -38,8 +39,9 @@
   }
 
   .hero {
-    @include width(90%, auto, 0, 0, 0, 0);
+    @include width(100%, auto, 0, 0, 0, 0);
     @include pa_ma(20% 0 0 0, none);
+    height: 100vh;
     &::after {
       width: 100%;
     }
@@ -101,4 +103,71 @@
       place-items: center;
     }
   }
+}
+
+@include media-sm {
+  section {
+    padding: 15px 30px !important;
+    &.storyslider {
+      padding: 15px 0 !important;
+    }
+  }
+
+  header {
+    nav {
+      justify-content: space-between;
+      width: 100%;
+    }
+    .toggle {
+      margin-right: 80%;
+      .close {
+        color: #312620;
+        left: 80%;
+      }
+    }
+  }
+
+  .cardmain {
+    .card-story {
+      font-size: 40px;
+      top: -20%;
+    }
+
+    .card-container {
+      flex-direction: column;
+
+      .center {
+        margin: 20vh 0 20vh 0;
+      }
+    }
+  }
+
+  .slick-slide {
+    div {
+      margin-bottom: -5px;
+    }
+  }
+
+  .weddetails {
+    .message {
+      margin: 0;
+    }
+    .wed-info {
+      flex-direction: column;
+    }
+    .left, .right {
+      height: auto !important;
+    }
+
+    .left {
+      margin-bottom: 20px;
+    }
+  }
+
+  .gallery {
+    .product_items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
 }
