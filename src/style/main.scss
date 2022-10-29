@@ -44,7 +44,7 @@ li {
 }
 
 .button {
-  @include width(150px, 40px, linear-gradient(90deg, #ff4267 40%, #ff4b2e 100%), $white, 40px, none);
+  @include width(150px, 40px, linear-gradient(90deg, $primary 40%, #F62682 100%), $white, 40px, none);
   @include flex(center, center, center);
   .heIcon {
     margin: 0 $sm;
@@ -108,8 +108,8 @@ h2 {
       margin: 5px;
 
       &:hover {
-        background: $primary;
-        color: $white;
+        background: $white;
+        color: rgba($text, .5);
       }
     }
     .overlay {
@@ -169,7 +169,7 @@ footer {
   z-index: 999999;
   .onClickImage {
     position: relative;
-    @include positions(fixed, 0px, none, 0, none, 100%, 110vh);
+    @include positions(fixed, auto, none, 0, none, 100%, 110vh);
     @include flex(center, center, center);
 
     img {
@@ -179,8 +179,8 @@ footer {
       z-index: 99999;
     }
     .button {
-      @include positions(absolute, 13%, none, none, 29%, none, none);
-      @include width(40px, 40px, linear-gradient(90deg, #ff4267 40%, #ff4b2e 100%), $white, 40px, none);
+      @include positions(absolute, 6%, none, none, 0%, none, none);
+      @include width(40px, 40px, linear-gradient(90deg, $primary 20%, #aea7aae9 100%), $text, 0px 0 0px 24px, none);
       z-index: 999999;
     }
     &::after {

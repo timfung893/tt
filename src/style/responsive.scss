@@ -159,14 +159,19 @@
       height: auto !important;
     }
 
-    .left {
-      margin-bottom: 20px;
+    .left, .img {
+      margin-bottom: 20px !important;
     }
   }
 
   .gallery {
     .product_items {
       grid-template-columns: repeat(2, 1fr);
+    }
+    .onClickImage {
+      .button {
+        right: 0 !important;
+      }
     }
   }
 

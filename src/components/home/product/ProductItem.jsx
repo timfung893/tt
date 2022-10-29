@@ -28,12 +28,6 @@ function ProductItem({ data }) {
                         <div className="img">
                             <img src={items.cover} alt="" />
                             <div className="overlay">
-                                <button className="button" onClick={() => addToCart(items)}>
-                                    <FiShoppingBag/>
-                                </button>
-                                <button className="button">
-                                    <AiOutlineHeart/>
-                                </button>
                                 <button className="button" onClick={() => onOpenImage(items.cover)}>
                                     <FiSearch/>
                                 </button>

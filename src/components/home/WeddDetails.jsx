@@ -39,14 +39,14 @@ function WeddDetails(props) {
                 <div className="wed-wrapper">
                     <div className="wed-info">
                         <div className="left">
-                            <h2>Thời Gian</h2>
+                            <h2>Lúc</h2>
                             <p>24 tháng 12 2022, 6:00 PM</p>
                         </div>
                         <div className="img">
                             <img src="../images/hero/flower.webp" alt="" />
                         </div>
                         <div className="right">
-                            <h2>Địa Điểm</h2>
+                            <h2>Tại</h2>
                             <p>Pergola<br /> 
                             28A Trần Cao Vân, Phường 12, <br />
                             Phú Nhuận, Thành phố Hồ Chí Minh</p>
