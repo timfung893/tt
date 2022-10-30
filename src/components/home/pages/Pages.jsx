@@ -14,7 +14,7 @@ function Pages({ data }) {
             <Router>
                 <Header />
                 <Switch>
-                    <Route exact path='/tt'>
+                    <Route path={process.env.PUBLIC_URL + '/'}>
                         <Home data={data} />
                     </Route>
                 </Switch>
