@@ -3,7 +3,7 @@ import React from 'react';
 function CardMain(props) {
     return (
         <>
-            <section className="cardmain" id='ourstory'>
+            <section className="cardmain" id='ourstory' data-aos="fade">
                 <p className='card-story'>Sau 2 năm, 11 tháng, 27 ngày...</p>
                 <div className="container card-container">
                     <div className="left">

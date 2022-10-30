@@ -14,17 +14,17 @@ function ProductItem({ data }) {
         setOpenImage(true)
     }
 
-    const dispatch = useDispatch()
-
-    const addToCart = (e) => {
-        dispatch(ADD(e))
-    }
+    // const switchModal = () => {
+    //     if(openImage && openImage === true) {
+    //         document.querySelector('.modelClose').classList.add('active')
+    //     }
+    // }
 
     return (
         <>
             <div className="product_items">
-                {data.map((items) => (
-                    <div className="box" key={items.id}>
+                {data.slice(6, undefined).map((items) => (
+                    <div className="box" key={items.id} data-aos="fade">
                         <div className="img">
                             <img src={items.cover} alt="" />
                             <div className="overlay">
@@ -33,15 +33,15 @@ function ProductItem({ data }) {
                                 </button>
                             </div>
                         </div>
-                        <div className="details">
+                        {/* <div className="details">
                             <h3>{items.title}</h3>
                             <p>{items.author}</p>
                             <h4>Price: {items.price}</h4>
-                        </div>
+                        </div> */}
                     </div>
                 ))}
             </div>
-            <div className={openImage? 'modelOpen' : 'modelClose'}>
+            <div className={openImage? 'modalOpen' : 'modalClose'}>
                 <div className="onClickImage">
                     <img src={img} alt="" />
                     <button className="button" onClick={() => setOpenImage(false)}>
