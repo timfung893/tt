@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { topProducts } from '../../assets/data/data';
 import Heading from '../../common/Heading';
-import ProductItem from '../pages/product/ProductItem';
+import ProductItem from '../product/ProductItem';
 
 function TopProducts(props) {
     const [data, setData] = useState(topProducts)

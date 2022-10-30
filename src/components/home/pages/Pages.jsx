@@ -6,16 +6,17 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link
-  } from "react-router-dom";
+} from "react-router-dom";
 
-function Pages(props) {
+function Pages({ data }) {
     return (
         <>
             <Router>
                 <Header />
                 <Switch>
-                    <Route exact path='/' component={Home}></Route>
+                    <Route exact path='/'>
+                        <Home data={data} />
+                    </Route>
                 </Switch>
                 <Footer />
 

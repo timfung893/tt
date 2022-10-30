@@ -2,9 +2,9 @@ import React from 'react';
 
 function Footer(props) {
     return (
-        <div>
-            footer
-        </div>
+        <footer>
+            <p>Thịnh & Thảo 2022</p>
+        </footer>
     );
 }
 
