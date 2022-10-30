@@ -16,7 +16,7 @@ function Hero(props) {
     const setHeroTop =  () => {
         const header = document.querySelector('header.header');
         const hero = document.querySelector('.hero');
-        const headerHeight = header.offsetHeight;
+        const headerHeight = header.offsetHeight + 36;
         hero.style.top =  '-' + headerHeight + 'px'
     }
 
@@ -38,7 +38,8 @@ function Hero(props) {
     document.addEventListener('click', () => {
         document.getElementById('mungJungYan').play()
     }, { once: true } )
-    
+    // document.getElementById('bgVid').play()
+
     useEffect(() => {
         showHeroHeading()
         setHeroTop()
@@ -47,7 +48,7 @@ function Hero(props) {
     return (
       <>    
         <section className="hero" id='home'>
-            <video autoPlay muted loop>
+            <video autoPlay loop id="bgVid" muted={true}>
                 <source src='videos/bg.mp4' type='video/mp4'/>
             </video>
             <audio controls autoPlay id='mungJungYan'>

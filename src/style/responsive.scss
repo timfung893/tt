@@ -25,9 +25,10 @@
         li {
           margin-top: $xl;
           a {
-            color: $dark;
             margin-bottom: $md;
             font-size: $xl-2;
+            color: $heading;
+            text-transform: lowercase;
           }
         }
       }
