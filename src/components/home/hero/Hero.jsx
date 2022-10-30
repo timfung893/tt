@@ -16,7 +16,7 @@ function Hero(props) {
     const setHeroTop =  () => {
         const header = document.querySelector('header.header');
         const hero = document.querySelector('.hero');
-        const headerHeight = header.offsetHeight + 30;
+        const headerHeight = header.offsetHeight;
         hero.style.top =  '-' + headerHeight + 'px'
     }
 
