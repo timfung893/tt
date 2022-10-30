@@ -44,7 +44,7 @@ function Header(props) {
               1000
             );
         });
-        $(".gallery").click(() => {
+        $(".link.gallery").click(() => {
             $("html, body").animate(
               {
                 scrollTop: $("#gallery").offset().top,

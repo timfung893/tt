@@ -9,7 +9,7 @@ function Gallery(props) {
 
     return (
         <>
-            <section className="gallery" id='gallery'>
+            <section className="gallery" id='gallery' data-aos="fade-right">
                 <div className="container">
                     <Heading title='Ảnh' desc='Cho mọi người xem chơi...' />
                     <ProductItem data={data} />

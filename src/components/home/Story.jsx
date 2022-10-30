@@ -41,10 +41,10 @@ function Story(props) {
 
     return (
         <>
-            <section className="storyslider" id='storyslider'>
+            <section className="storyslider" id='storyslider' data-aos="fade">
                 <Heading title='' desc='Mọi chuyện bắt đầu từ đây...'/>
                 <Slider {...settings}>
-                    {data.slice(0,5).map((item) => (
+                    {data.filter(item => item.id !== 7).slice(0,6).map((item) => (
                         <div className="photo" key={item.id}>
                             <img src={item.cover} alt="" />
                         </div>

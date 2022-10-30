@@ -14,16 +14,12 @@
 @import 'location';
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "UVFAmplify", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: auto;
 
 }
-// .bg {
-//   background: url('../../public/images/hero/fl-bg.png');
-//   background-size: cover;
-// }
 img {
   image-rendering: optimizequality;
   image-rendering: -webkit-optimize-contrast;
@@ -32,6 +28,7 @@ a {
   @include default;
   font-weight: weight(medium);
   color: $dark;
+  font-family: 'Kudryashev', serif;
   @include transition;
   &:hover {
     box-shadow: 0 0 4px 0 $text;
@@ -62,10 +59,11 @@ p {
   color: $blue;
   opacity: 0.7;
   font-size: $md;
+  font-family: 'Kudryashev', serif;
 }
 
 h2 {
-  font-family: "Kudryashev";
+  font-family: "UVFAmplify";
 }
 .card {
   @include width(none, none, $white, none, 10px, 20px);
@@ -81,13 +79,15 @@ h2 {
   h2 {
     font-size: 60px;
     color: $heading;
-    font-family: "Kudryashev";
+    font-family: "UVFAmplify";
   }
 }
 .product_items {
-  @include grid(repeat(4, 1fr), 30px);
+  @include grid(repeat(2, 1fr), 30px);
   .box {
     cursor: pointer;
+    display:flex;
+    align-items: center;
     .img {
       position: relative;
       img {
@@ -106,7 +106,6 @@ h2 {
       font-size: $lg;
       @include transition;
       margin: 5px;
-
       &:hover {
         background: $white;
         color: rgba($text, .5);
@@ -164,17 +163,16 @@ footer {
 .topproduct {
   position: relative;
 }*/
-.modelOpen {
-  @include positions(absolute, -50px, none, 0, none, 100%, 130vh);
+.modalOpen {
+  @include positions(fixed, -50px, none, 0, none, 100%, 130vh);
   z-index: 999999;
   .onClickImage {
-    position: relative;
-    @include positions(fixed, auto, none, 0, none, 100%, 110vh);
+    @include positions(fixed, auto, none, 0, none, 100%, 113vh);
     @include flex(center, center, center);
 
     img {
       @include flex(center, center, center);
-      width: 600px;
+      width: auto;
       height: 600px;
       z-index: 99999;
     }
@@ -185,13 +183,13 @@ footer {
     }
     &::after {
       content: "";
-      @include positions(absolute, -50px, none, 0, none, 100%, 110vh);
+      @include positions(absolute, -50px, none, 0, none, 100%, 105%);
       background: rgba(#000000, 0.8); 
     }
   }
 }
-.modelClose {
-  img,
+.modalClose {
+  display: none;
   .button {
     display: none;
   }

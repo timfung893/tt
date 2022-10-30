@@ -35,9 +35,9 @@ function Hero(props) {
         }, 2000);   
     }
 
-    // document.addEventListener('click', () => {
-    //     document.getElementById('mungJungYan').play()
-    // }, { once: true } )
+    document.addEventListener('click', () => {
+        document.getElementById('mungJungYan').play()
+    }, { once: true } )
     
     useEffect(() => {
         showHeroHeading()
