@@ -14,7 +14,7 @@ function Pages({ data }) {
             <Router>
                 <Header />
                 <Switch>
-                    <Route exact path='/'>
+                    <Route exact path='/tt'>
                         <Home data={data} />
                     </Route>
                 </Switch>
