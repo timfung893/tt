@@ -28,7 +28,7 @@ a {
   @include default;
   font-weight: weight(medium);
   color: $dark;
-  font-family: 'kurizaev', serif;
+  font-family: 'Kudryashev', serif;
   @include transition;
   &:hover {
     box-shadow: 0 0 4px 0 $text;
@@ -59,7 +59,7 @@ p {
   color: $blue;
   opacity: 0.7;
   font-size: $md;
-  font-family: 'kurizaev', serif;
+  font-family: 'Kudryashev', serif;
 }
 
 h2 {
@@ -79,7 +79,7 @@ h2 {
   h2 {
     font-size: 60px;
     color: $heading;
-    font-family: "svn-harmonyregular";
+    font-family: "UVFAmplify";
   }
 }
 .product_items {

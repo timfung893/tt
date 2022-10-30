@@ -13,13 +13,7 @@ function ProductItem({ data }) {
         setImg(src)
         setOpenImage(true)
     }
-
-    // const switchModal = () => {
-    //     if(openImage && openImage === true) {
-    //         document.querySelector('.modelClose').classList.add('active')
-    //     }
-    // }
-
+    
     return (
         <>
             <div className="product_items">
