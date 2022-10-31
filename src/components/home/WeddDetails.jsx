@@ -40,7 +40,7 @@ function WeddDetails(props) {
                     <div className="wed-info">
                         <div className="left">
                             <h2>Lúc</h2>
-                            <p>24 tháng 12 2022, 6:00 PM</p>
+                            <p>24 tháng 12 2022, <br /> 6:00 PM</p>
                         </div>
                         <div className="img">
                             <img src="../images/hero/flower.webp" alt="" />
