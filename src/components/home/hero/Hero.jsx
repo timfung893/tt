@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { BiSearch } from "react-icons/bi";
-import SearchItems from './SearchItems';
-import { products } from '../../assets/data/data';
+import ReactPlayer from 'react-player';
+
 
 function Hero(props) {
     const [value, setValue] = useState('')
@@ -48,9 +47,14 @@ function Hero(props) {
     return (
       <>    
         <section className="hero" id='home'>
-            <video autoPlay loop id="bgVid" muted={true}>
-                <source src='videos/bg.mp4' type='video/mp4'/>
-            </video>
+            <ReactPlayer 
+            id="bgVid"
+            url='videos/bg.mp4'
+            playing
+            loop={true}
+            volume={null}
+            controls={null}
+            muted={true}/>
             <audio controls autoPlay id='mungJungYan'>
                 <source src="music/mjyan.mp3" type="audio/mpeg" />
             </audio>
