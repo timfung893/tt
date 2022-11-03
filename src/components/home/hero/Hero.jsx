@@ -4,6 +4,7 @@ import ReactPlayer from 'react-player';
 
 function Hero(props) {
     const [value, setValue] = useState('')
+    const [headerHeight, setHeaderHeight] = useState('')
     const onChange = (e) => {
         setValue(e.target.value)
     }
@@ -15,7 +16,8 @@ function Hero(props) {
     const setHeroTop =  () => {
         const header = document.querySelector('header.header');
         const hero = document.querySelector('.hero');
-        const headerHeight = header.offsetHeight + 36;
+        const headerHeight = header.offsetHeight;
+        setHeaderHeight(headerHeight)
         hero.style.top =  '-' + headerHeight + 'px'
     }
 
@@ -42,15 +44,15 @@ function Hero(props) {
     useEffect(() => {
         showHeroHeading()
         setHeroTop()
-    },[])
+    },[headerHeight])
 
     return (
       <>    
         <section className="hero" id='home'>
             <ReactPlayer 
             id="bgVid"
-            url='videos/bg.mp4'
-            playing
+            url='tt/videos/bg.mp4'
+        playing
             loop={true}
             volume={null}
             controls={null}
