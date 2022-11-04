@@ -12,7 +12,7 @@ function Hero(props) {
         setValue(key)
         console.log('search', key);
     }
-    
+
     const setHeroTop =  () => {
         const header = document.querySelector('header.header');
         const hero = document.querySelector('.hero');
@@ -44,14 +44,18 @@ function Hero(props) {
     useEffect(() => {
         showHeroHeading()
         setHeroTop()
-    },[headerHeight])
+        window.addEventListener('load', function() {
+            setHeroTop()
+        })
 
+    },[headerHeight])
+    
     return (
       <>    
         <section className="hero" id='home'>
             <ReactPlayer 
             id="bgVid"
-            url='videos/bg.mp4'
+            url='tt/videos/bg.mp4'
         playing
             loop={true}
             volume={null}
