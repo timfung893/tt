@@ -55,7 +55,7 @@ function Hero(props) {
         <section className="hero" id='home'>
             <ReactPlayer 
             id="bgVid"
-            url='tt/videos/bg.mp4'
+            url='videos/bg.mp4'
         playing
             loop={true}
             volume={null}
