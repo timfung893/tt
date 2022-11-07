@@ -32,7 +32,7 @@ function WeddDetails(props) {
 
     return (
         <>
-            <section className="weddetails">
+            <section className="weddetails card-section">
                 <div className="overlay-bg"></div>
                 <Heading title='Đám Cưới' desc=''/>
                 <p className='message'>Buổi tiệc cưới sẽ diễn ra sớm hơn thông thường một chút - vào lúc 6 giờ tối. Mọi người chịu khó đến đúng giờ nhé!</p>

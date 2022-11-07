@@ -9,6 +9,16 @@ import WeddDetails from './WeddDetails';
 import Celebrate from './Celebrate';
 
 function Home(props) {
+  const ios = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+  const cardSection = document.querySelector('.card-section')
+  if (ios === true) {
+    cardSection.classList.add('scroll')
+  }
+  console.log(ios);
+
+  useEffect(()=> {
+    
+  })
   return (
     <>
       <Hero />
