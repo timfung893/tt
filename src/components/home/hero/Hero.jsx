@@ -56,7 +56,9 @@ function Hero(props) {
             <ReactPlayer 
             id="bgVid"
             url='videos/bg.mp4'
-        playing
+            playing
+            webkit-playsinline={true}
+            playsinline={true}
             loop={true}
             volume={null}
             controls={null}
