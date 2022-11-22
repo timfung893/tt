@@ -3,21 +3,43 @@
     .toggle {
       display: block;
       margin-right: 230%;
+      z-index: 999;
       .close {
         @include positions(absolute, 20px, none, 40%, none, 50px, 50px);
         @include width(40px, 40px, $white, $primary, 50%, 8px);
         z-index: 999999;
       }
+      .bar {
+        width: 15px;
+        height: 2px;
+        color: $text;
+        background: #0a2748;
+        margin-bottom: 2px;
+        transition: all 0.3s ease-in-out;
+        transform-origin: 1.8px;
+
+        &.two {
+          opacity: 1;
+        }
+        &.one.active {
+          transform: rotate(45deg);
+        }
+        &.two.active {
+          opacity: 0;
+        }
+        &.three.active {
+          transform: rotate(-45deg);
+        }
+      }
     }
     .center {
+      z-index: 998;
       ul {
         transition: all .3s ease-in-out;
         -webkit-transition: all .3s ease-in-out;
         position: fixed;
-        top: 0;
       }
       .menu {
-        transform: scale(0);
         opacity: 0;
         visibility: hidden;
       }
@@ -29,7 +51,6 @@
         @include width(400px, 100vh, $light, $white, 0, null);
         padding: $large 0;
         z-index: 99999;
-        transform: scale(1);
 
         li {
           margin-top: $xl;
@@ -147,7 +168,9 @@
       flex-direction: column;
 
       .center {
-        margin: 20vh 0 20vh 0;
+        margin: 5px;
+        height: 250px;
+        filter: hue-rotate();
       }
     }
 

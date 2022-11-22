@@ -75,13 +75,15 @@ function Header(props) {
                 <nav className='menu-wrapper'>
                     <div className="toggle">
                         <button onClick={() => setMobile(!mobile)}>
-                            {mobile ? <AiOutlineClose className='close heIcon'/> : <AiOutlineMenu className='open heIcon'/>}
+                            <div className={mobile ? 'bar one active' : 'bar one'}></div>
+                            <div className={mobile ? 'bar two active' : 'bar two'}></div>
+                            <div className={mobile ? 'bar three active' : 'bar three'}></div>
                         </button>
                     </div>
                     <div className="left">
                         <img src={logo} alt="" />
                     </div>
-                    <div className="center">
+                    <div className={mobile ? 'center open' : 'center'}>
                         <ul className={mobile ? 'mobile-nav' : 'menu'}>
                             <li>
                                 <a href='#home' className='link home'>home</a>
