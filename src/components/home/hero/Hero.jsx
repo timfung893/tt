@@ -3,18 +3,18 @@ import ReactPlayer from 'react-player';
 
 
 function Hero(props) {
-    const [value, setValue] = useState('')
+    // const [value, setValue] = useState('')
     const [headerHeight, setHeaderHeight] = useState('')
-    const onChange = (e) => {
-        setValue(e.target.value)
-    }
-    const onSearch = (key) => {
-        setValue(key)
-        console.log('search', key);
-    }
+    // const onChange = (e) => {
+    //     setValue(e.target.value)
+    // }
+    // const onSearch = (key) => {
+    //     setValue(key)
+    //     console.log('search', key);
+    // }
 
     const setHeroTop =  () => {
-        const header = document.querySelector('header.header');
+        const header = document.querySelector('.header');
         const hero = document.querySelector('.hero');
         const headerHeight = header.offsetHeight;
         setHeaderHeight(headerHeight)
@@ -39,7 +39,6 @@ function Hero(props) {
     document.addEventListener('click', () => {
         document.getElementById('mungJungYan').play()
     }, { once: true } )
-    // document.getElementById('bgVid').play()
 
     useEffect(() => {
         showHeroHeading()
@@ -47,7 +46,6 @@ function Hero(props) {
         window.addEventListener('load', function() {
             setHeroTop()
         })
-
     },[headerHeight])
     
     return (

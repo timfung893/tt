@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Pages from './components/home/pages/Pages';
-import './style/main.scss';
 import AOS from 'aos';
+import './style/main.scss';
 import 'aos/dist/aos.css';
 
 function App() {
@@ -11,10 +11,12 @@ function App() {
     delay: 50,
     once: true
   });
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, [])
+
   return (
     <>
       <Pages />

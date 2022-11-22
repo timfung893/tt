@@ -11,16 +11,25 @@
     }
     .center {
       ul {
-        display: none;
         transition: all .3s ease-in-out;
+        -webkit-transition: all .3s ease-in-out;
+        position: fixed;
+        top: 0;
       }
-
+      .menu {
+        transform: scale(0);
+        opacity: 0;
+        visibility: hidden;
+      }
       .mobile-nav {
         display: block;
+        opacity: 1;
+        visibility: visible;
         @include positions(fixed, 0, none, -50px, none, none, none);
-        @include width(400px, 100vh, $light, $white, 0, 0);
+        @include width(400px, 100vh, $light, $white, 0, null);
         padding: $large 0;
         z-index: 99999;
+        transform: scale(1);
 
         li {
           margin-top: $xl;
@@ -123,7 +132,7 @@
       margin-right: 80%;
       .close {
         color: #312620;
-        left: 80%;
+        left: 70%;
       }
     }
   }
@@ -140,6 +149,13 @@
       .center {
         margin: 20vh 0 20vh 0;
       }
+    }
+
+    .name {
+      background: rgba($color: $light, $alpha: .7);
+      border-radius: 30px;
+      padding: 15px;
+      height: fit-content;
     }
   }
 

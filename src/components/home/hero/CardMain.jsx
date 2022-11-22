@@ -32,7 +32,7 @@ function CardMain(props) {
             </section>
             <div className="card-icon">
                 <hr className='end' />
-                <p>XOXO</p>
+                <p>xoxo</p>
             </div>
         </>
     );

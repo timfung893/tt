@@ -6,7 +6,8 @@ function Celebrate(props) {
         <>
             <section className="celebrate card-section" data-aos="fade">
                 <div className="heading">
-                    <h2>Hẹn gặp mọi người!
+                    <h2>
+                        Hẹn gặp mọi người!
                     </h2>
                 </div>
             </section>

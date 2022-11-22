@@ -62,7 +62,6 @@ function Header(props) {
         });
     };
 
-    
     // set state for mobile menu
     const [mobile, setMobile] = useState(false);
 
