@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import {FiShoppingBag} from 'react-icons/fi';
 import {FiSearch} from 'react-icons/fi';
 import {AiOutlineHeart, AiOutlineClose} from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
 import { ADD } from '../../controller/action';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function ProductItem({ data }) {
     const [openImage, setOpenImage] = useState(false)
@@ -20,7 +20,7 @@ function ProductItem({ data }) {
                 {data.slice(6, undefined).map((items) => (
                     <div className="box" key={items.id} data-aos="fade">
                         <div className="img">
-                            <img src={items.cover} alt="" />
+                            <LazyLoadImage src={items.cover} alt="" />
                             <div className="overlay">
                                 <button className="button" onClick={() => onOpenImage(items.cover)}>
                                     <FiSearch/>

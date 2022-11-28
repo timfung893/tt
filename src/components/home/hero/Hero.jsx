@@ -55,7 +55,7 @@ function Hero(props) {
             id="bgVid"
             url='videos/bg.mp4'
             playing
-            webkit-playsinline={true}
+            webkit-playsinline='true'
             playsinline={true}
             loop={true}
             volume={null}
