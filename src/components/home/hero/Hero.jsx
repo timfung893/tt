@@ -4,22 +4,15 @@ import ReactPlayer from 'react-player';
 
 function Hero(props) {
     // const [value, setValue] = useState('')
-    const [headerHeight, setHeaderHeight] = useState('')
     // const onChange = (e) => {
-    //     setValue(e.target.value)
-    // }
-    // const onSearch = (key) => {
-    //     setValue(key)
-    //     console.log('search', key);
-    // }
+        //     setValue(e.target.value)
+        // }
+        // const onSearch = (key) => {
+            //     setValue(key)
+            //     console.log('search', key);
+            // }
 
-    const setHeroTop =  () => {
-        const header = document.querySelector('.header');
-        const hero = document.querySelector('.hero');
-        const headerHeight = header.offsetHeight;
-        setHeaderHeight(headerHeight)
-        hero.style.top =  '-' + headerHeight + 'px'
-    }
+    const [headerHeight, setHeaderHeight] = useState(0)
 
     const showHeroHeading = () => {
         const hero = document.querySelector('.hero-heading')
@@ -42,6 +35,13 @@ function Hero(props) {
 
     useEffect(() => {
         showHeroHeading()
+        const setHeroTop =  () => {
+            const header = document.querySelector('.header');
+            const hero = document.querySelector('.hero');
+            const headerHeight = header.clientHeight;
+            setHeaderHeight(headerHeight)
+            hero.style.top =  '-' + headerHeight + 'px'
+        }
         setHeroTop()
         window.addEventListener('load', function() {
             setHeroTop()
@@ -55,7 +55,6 @@ function Hero(props) {
             id="bgVid"
             url='videos/bg.mp4'
             playing
-            webkit-playsinline='true'
             playsinline={true}
             loop={true}
             volume={null}

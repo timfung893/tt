@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { ADD } from '../../controller/action';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-function ProductItem({ data }) {
+function PhotoCell({ data: items }) {
     const [openImage, setOpenImage] = useState(false)
     const [img, setImg] = useState('')
 
@@ -16,24 +16,15 @@ function ProductItem({ data }) {
     
     return (
         <>
-            <div className="product_items">
-                {data.slice(6, undefined).map((items) => (
-                    <div className="box" key={items.id} data-aos="fade">
-                        <div className="img">
-                            <LazyLoadImage src={items.cover} alt="" />
-                            <div className="overlay">
-                                <button className="button" onClick={() => onOpenImage(items.cover)}>
-                                    <FiSearch/>
-                                </button>
-                            </div>
-                        </div>
-                        {/* <div className="details">
-                            <h3>{items.title}</h3>
-                            <p>{items.author}</p>
-                            <h4>Price: {items.price}</h4>
-                        </div> */}
+            <div className="box" data-aos="fade">
+                <div className="img">
+                    <img src={items.cover} alt="" />
+                    <div className="overlay">
+                        <button className="button" onClick={() => onOpenImage(items.cover)}>
+                            <FiSearch/>
+                        </button>
                     </div>
-                ))}
+                </div>
             </div>
             <div className={openImage? 'modalOpen' : 'modalClose'}>
                 <div className="onClickImage">
@@ -47,4 +38,4 @@ function ProductItem({ data }) {
     );
 }
 
-export default ProductItem;
+export default PhotoCell;

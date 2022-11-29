@@ -96,8 +96,8 @@
   }
   .topproduct,
   .product {
-    .product_items {
-      @include grid(repeat(2, 1fr), 30px);
+    .photos {
+      // @include grid(repeat(2, 1fr), 30px);
     }
   }
   .topproduct {
@@ -205,8 +205,8 @@
   }
 
   .gallery {
-    .product_items {
-      grid-template-columns: repeat(2, 1fr);
+    .photos {
+      // grid-template-columns: repeat(2, 1fr);
     }
     .onClickImage {
       .button {
