@@ -39,7 +39,6 @@ button,
 li {
   @include default;
 }
-
 .button {
   @include width(150px, 40px, linear-gradient(90deg, $primary 40%, #F62682 100%), $white, 40px, none);
   @include flex(center, center, center);
@@ -53,15 +52,16 @@ section {
   &.gallery {
     padding: 0;
   }
+  &.location {
+    padding: 15px 0;
+  }
 }
-
 p {
   color: $blue;
   opacity: 0.7;
   font-size: $md;
   font-family: 'Kudryashev', serif;
 }
-
 h2 {
   font-family: "UVFAmplify";
 }

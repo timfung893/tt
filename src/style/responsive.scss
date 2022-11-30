@@ -139,7 +139,7 @@
 @include media-sm {
   section {
     padding: 15px 30px !important;
-    &.storyslider {
+    &.storyslider, &.location {
       padding: 15px 0 !important;
     }
   }
