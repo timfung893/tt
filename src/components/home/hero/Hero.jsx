@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useLayoutEffect, useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 
 
-function Hero(props) {
+function Hero({headerHeight}) {
     // const [value, setValue] = useState('')
     // const onChange = (e) => {
         //     setValue(e.target.value)
@@ -12,8 +12,15 @@ function Hero(props) {
             //     console.log('search', key);
             // }
 
-    const [headerHeight, setHeaderHeight] = useState(0)
-
+    const [headerH, setHeaderHeight] = useState(0)
+    const setHeroTop =  () => {
+        // const header = document.querySelector('.header');
+        const hero = document.querySelector('.hero');
+        const headerHeightData = 94;
+        setHeaderHeight(headerHeightData)
+        hero.style.top =  '-' + headerHeightData + 'px'
+    }
+    
     const showHeroHeading = () => {
         const hero = document.querySelector('.hero-heading')
         const hero2 = document.querySelector('.hero-heading-2')
@@ -33,27 +40,20 @@ function Hero(props) {
         document.getElementById('mungJungYan').play()
     }, { once: true } )
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         showHeroHeading()
-        const setHeroTop =  () => {
-            const header = document.querySelector('.header');
-            const hero = document.querySelector('.hero');
-            const headerHeight = header.clientHeight;
-            setHeaderHeight(headerHeight)
-            hero.style.top =  '-' + headerHeight + 'px'
-        }
         setHeroTop()
-        window.addEventListener('load', function() {
+        document.onreadystatechange = () => {
             setHeroTop()
-        })
-    },[headerHeight])
+        }
+    },[])
     
     return (
-      <>    
+      <>
         <section className="hero" id='home'>
             <ReactPlayer 
             id="bgVid"
-            url='videos/bg.mp4'
+            url='tt/videos/bg.mp4'
             playing
             playsinline={true}
             loop={true}
