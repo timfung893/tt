@@ -18,7 +18,7 @@ function Gallery(props) {
                         columnGutter={8}
                         columnWidth={150}
                         columnCount={3}
-                        overscanBy={5}
+                        overscanBy={32}
                         render={PhotoCell}
                     />
                     <Heading title='' desc='Còn nữa, nhưng để dành nha keke...' />
