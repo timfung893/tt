@@ -36,9 +36,9 @@ function Hero({headerHeight}) {
         }, 2000);   
     }
 
-    document.addEventListener('click', () => {
-        document.getElementById('mungJungYan').play()
-    }, { once: true } )
+    // document.addEventListener('click', () => {
+    //     document.getElementById('mungJungYan').play()
+    // }, { once: true } )
 
     useLayoutEffect(() => {
         showHeroHeading()
@@ -53,7 +53,7 @@ function Hero({headerHeight}) {
         <section className="hero" id='home'>
             <ReactPlayer 
             id="bgVid"
-            url='tt/videos/bg.mp4'
+            url='videos/bg.mp4'
             playing
             playsinline={true}
             loop={true}
