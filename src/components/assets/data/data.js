@@ -331,15 +331,6 @@ export const products = [
     category: "web theme",
     qty: 0,
   },
-  {
-    id: 32,
-    cover: "images/photos/32.jpg", 
-    title: "Floating 2021 iPhone 12 Mockups (PSD)",
-    author: "by Blueskytechco in Mockups",
-    price: "30.00",
-    category: "web theme",
-    qty: 0,
-  },
 ]
 export const banner = [
   {
