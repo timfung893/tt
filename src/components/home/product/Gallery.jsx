@@ -17,7 +17,7 @@ function Gallery(props) {
                         items={data.slice(6, undefined)}
                         columnGutter={8}
                         columnWidth={150}
-                        columnCount={2}
+                        columnCount={3}
                         overscanBy={5}
                         render={PhotoCell}
                     />

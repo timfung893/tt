@@ -4,6 +4,7 @@ import {AiOutlineHeart, AiOutlineClose} from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
 import { ADD } from '../../controller/action';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function PhotoCell({ data: items }) {
     const [openImage, setOpenImage] = useState(false)
@@ -16,9 +17,9 @@ function PhotoCell({ data: items }) {
     
     return (
         <>
-            <div className="box" data-aos="fade">
+            <div className="box">
                 <div className="img">
-                    <img src={items.cover} alt="" />
+                    <LazyLoadImage src={items.cover} alt="img"/>
                     <div className="overlay">
                         <button className="button" onClick={() => onOpenImage(items.cover)}>
                             <FiSearch/>
