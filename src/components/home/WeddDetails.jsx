@@ -35,7 +35,7 @@ function WeddDetails(props) {
             <section className="weddetails card-section">
                 <div className="overlay-bg"></div>
                 <Heading title='Đám Cưới' desc=''/>
-                <p className='message'>Buổi tiệc cưới sẽ diễn ra sớm hơn thông thường một chút - vào lúc 6 giờ tối. Mọi người chịu khó đến đúng giờ nhé!</p>
+                <p className='message'>Tiệc cưới sẽ diễn ra sớm hơn thông thường một chút - vào lúc 6 giờ tối. Mọi người chịu khó đến đúng giờ nhé!</p>
                 <div className="wed-wrapper">
                     <div className="wed-info">
                         <div className="left">
@@ -49,7 +49,7 @@ function WeddDetails(props) {
                             <h2>Tại</h2>
                             <p>Pergola<br /> 
                             28A Trần Cao Vân, Phường 12, <br />
-                            Phú Nhuận, Thành phố Hồ Chí Minh</p>
+                            Quận Phú Nhuận, Thành phố Hồ Chí Minh</p>
                         </div>
                     </div>
                 </div>
