@@ -6,6 +6,7 @@ header {
   top: 0;
   opacity: 0;
   @include transition;
+  cursor: auto;
   .container {
     @include flex(center, center, center);
   }
