@@ -7,7 +7,7 @@ import Story from './Story';
 import WeddDetails from './WeddDetails';
 import Celebrate from './Celebrate';
 
-function Home(props) {
+function Home({data}) {
   useEffect(() => {
     const ios = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
     const cardSection = document.querySelector('.card-section')
@@ -15,10 +15,9 @@ function Home(props) {
       cardSection.classList.add('scroll')
     }
   })
-
   return (
     <>
-      <Hero />
+      <Hero headerHeight={data}/>
       <div className="bg">
         <CardMain/>
         <Story />
