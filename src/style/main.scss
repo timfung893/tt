@@ -13,12 +13,17 @@
 @import "searchItem";
 @import 'location';
 
+html {
+  &.overflow-hidden {
+    overflow: hidden;
+    margin-right: 17px;
+  }
+}
 body {
   font-family: "UVFAmplify", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: auto;
-
 }
 img {
   image-rendering: optimizequality;

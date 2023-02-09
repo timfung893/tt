@@ -7,7 +7,7 @@ function CardMain(props) {
                 <p className='card-story'>Sau 2 năm, 11 tháng, 27 ngày...</p>
                 <div className="container card-container">
                     <div className="left">
-                        <img src="images/banner/thao.jpg" alt="" />
+                        <img src="images/banner/bride.jpg" alt="" />
                         <div className="name">
                             <h2>Phương Thảo</h2>
                             <p>2x tuổi (x đại học)</p>
@@ -20,7 +20,7 @@ function CardMain(props) {
                         <p>Cuối cùng <br></br>cũng chốt kèo :)</p> 
                     </div>
                     <div className="right">
-                    <img src="images/banner/thinh2.jpg" alt="" />
+                    <img src="images/banner/groom.jpg" alt="" />
                         <div className="name">
                             <h2>Trường Thịnh</h2>
                             <p>2x tuổi (x đại học)</p>

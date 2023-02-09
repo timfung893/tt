@@ -11,20 +11,10 @@ function Header(props) {
         const header = document.querySelector('.header')
         const hero = document.querySelector('.hero')
         const story = document.querySelector('.cardmain')
-        // const rect = story.getBoundingClientRect()
-        // const isInViewPort = rect.top >= 0 &&
-        // rect.left >= 0 &&
-        // rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        // rect.right <= (window.innerWidth || document.documentElement.clientWidth);
-
+        
         header.classList.toggle('active', this.window.scrollY > 70)
         hero.classList.toggle('is-trans', this.window.scrollY > 70)
         story.classList.toggle('active', this.window.scrollY > 70)
-
-        // if (isInViewPort && this.window.scrollY < 70) {
-        //     story.scrollIntoView()    
-        // }
-
     })
 
     const scrollOnClick = () => {

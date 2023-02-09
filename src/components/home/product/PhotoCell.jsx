@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {FiSearch} from 'react-icons/fi';
 import {AiOutlineHeart, AiOutlineClose} from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
@@ -14,14 +14,27 @@ function PhotoCell({ data: items, scrollPosition }) {
         setImg(src)
         setOpenImage(true)
     }
-    
+    const overflowBody = () => {
+        const htmlElement = document.getElementsByTagName("html")[0];
+        const imageModal = htmlElement.querySelector('.modalOpen')
+        if (openImage) {
+            htmlElement.classList.add('overflow-hidden');
+        } else if (!openImage && !imageModal) {
+            htmlElement.classList.remove('overflow-hidden');
+        }
+    }
+
+    useEffect(() =>{
+        overflowBody();
+    })
+
     return (
         <>
             <div className="box">
                 <div className="img">
                     <LazyLoadImage src={items.cover} alt="img" width={null} height={null}  scrollPosition={scrollPosition} effect="opacity"/>
                     <div className="overlay">
-                        <button className="button" onClick={() => onOpenImage(items.cover)}>
+                        <button className="button view-image" onClick={() => onOpenImage(items.cover)}>
                             <FiSearch/>
                         </button>
                     </div>
@@ -30,7 +43,7 @@ function PhotoCell({ data: items, scrollPosition }) {
             <div className={openImage? 'modalOpen' : 'modalClose'}>
                 <div className="onClickImage">
                     <img src={img} alt="" />
-                    <button className="button" onClick={() => setOpenImage(false)}>
+                    <button className="button close-image" onClick={() => setOpenImage(false)}>
                         <AiOutlineClose/>
                     </button>
                 </div> 

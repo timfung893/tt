@@ -3,18 +3,8 @@ import ReactPlayer from 'react-player';
 
 
 function Hero({headerHeight}) {
-    // const [value, setValue] = useState('')
-    // const onChange = (e) => {
-        //     setValue(e.target.value)
-        // }
-        // const onSearch = (key) => {
-            //     setValue(key)
-            //     console.log('search', key);
-            // }
-
     const [headerH, setHeaderHeight] = useState(0)
     const setHeroTop =  () => {
-        // const header = document.querySelector('.header');
         const hero = document.querySelector('.hero');
         const headerHeightData = 94;
         setHeaderHeight(headerHeightData)
