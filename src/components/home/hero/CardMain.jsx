@@ -16,7 +16,7 @@ function CardMain(props) {
                         </div>
                     </div>
                     <div className="center">
-                        <img className='center-img' src="images/hero/fl-frame.jpg" alt="" />
+                        <img className='center-img' src="images/hero/bg-2-frame.jpg" alt="" />
                         <p>Cuối cùng <br></br>cũng chốt kèo :)</p> 
                     </div>
                     <div className="right">
