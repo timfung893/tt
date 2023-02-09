@@ -207,6 +207,11 @@
   .gallery {
     .photos {
       // grid-template-columns: repeat(2, 1fr);
+      .box {
+        .overlay {
+          @include positions(absolute, none, -4%, 0, none, 100%, auto);
+        }
+      }
     }
     .onClickImage {
       .button {
