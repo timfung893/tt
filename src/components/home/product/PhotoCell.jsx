@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import {FiSearch} from 'react-icons/fi';
-import {AiOutlineHeart, AiOutlineClose} from 'react-icons/ai';
-import { useDispatch } from 'react-redux';
-import { ADD } from '../../controller/action';
+import { AiOutlineClose } from 'react-icons/ai';
 import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/opacity.css';
 
