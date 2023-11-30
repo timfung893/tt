@@ -24,58 +24,23 @@ function Header(props) {
 
     })
 
-    // function scrollToSection(id) {
-    //     $(id).click(() => {
-    //         $("html, body").animate(
-    //           {
-    //             scrollTop: $(id).offset().top,
-    //           },
-    //           1000
-    //         );
-    //         setMobile(false);
-    //     });
-    // }
+    function scrollToSection(id, sectionId) {
+        $(id).click(() => {
+            $("html, body").animate(
+              {
+                scrollTop: $(sectionId).offset().top,
+              },
+              1000
+            );
+            setMobile(false);
+        });
+    }
 
     const scrollOnClick = () => {
-        $(".home").click(() => {
-            $("html, body").animate(
-              {
-                scrollTop: $("#home").offset().top,
-              },
-              1000
-            );
-            setMobile(false);
-
-        });
-        $(".ourstory").click(() => {
-            $("html, body").animate(
-              {
-                scrollTop: $("#ourstory").offset().top - 200,
-              },
-              1000
-            );
-            setMobile(false);
-
-        });
-        $(".link.gallery").click(() => {
-            $("html, body").animate(
-              {
-                scrollTop: $("#gallery").offset().top,
-              },
-              1000
-            );
-            setMobile(false);
-
-        });
-        $(".location").click(() => {
-            $("html, body").animate(
-              {
-                scrollTop: $("#location").offset().top,
-              },
-              1000
-            );
-            setMobile(false);
-        });
+        scrollToSection(".home", "#home");
+        scrollToSection(".ourstory", "#ourstory");
+        scrollToSection(".link.gallery", "#gallery");
+        scrollToSection(".location", "#location");
     };
 
     // set state for mobile menu
