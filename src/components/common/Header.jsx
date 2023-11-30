@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import $ from 'jquery'; 
 import logo from '../assets/images/icon.png';
-import { AiOutlineHeart, AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
-import { navlist } from '../assets/data/data';
-import { Link } from 'react-router-dom';
 import { connect, useDispatch, useSelector } from 'react-redux';
 
 function Header(props) {
@@ -27,6 +24,18 @@ function Header(props) {
 
     })
 
+    // function scrollToSection(id) {
+    //     $(id).click(() => {
+    //         $("html, body").animate(
+    //           {
+    //             scrollTop: $(id).offset().top,
+    //           },
+    //           1000
+    //         );
+    //         setMobile(false);
+    //     });
+    // }
+
     const scrollOnClick = () => {
         $(".home").click(() => {
             $("html, body").animate(
@@ -35,6 +44,8 @@ function Header(props) {
               },
               1000
             );
+            setMobile(false);
+
         });
         $(".ourstory").click(() => {
             $("html, body").animate(
@@ -43,6 +54,8 @@ function Header(props) {
               },
               1000
             );
+            setMobile(false);
+
         });
         $(".link.gallery").click(() => {
             $("html, body").animate(
@@ -51,6 +64,8 @@ function Header(props) {
               },
               1000
             );
+            setMobile(false);
+
         });
         $(".location").click(() => {
             $("html, body").animate(
@@ -59,6 +74,7 @@ function Header(props) {
               },
               1000
             );
+            setMobile(false);
         });
     };
 

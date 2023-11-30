@@ -15,7 +15,7 @@ function PhotoCell({ data: items, scrollPosition }) {
     
     return (
         <>
-            <div className="box">
+            <div className="box" data-aos="fade">
                 <div className="img">
                     <LazyLoadImage src={items.cover} alt="img" width={null} height={null}  scrollPosition={scrollPosition} effect="opacity"/>
                     <div className="overlay">
