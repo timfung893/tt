@@ -9,9 +9,9 @@ function Pages({ data }) {
     return (
         <>
             <Router>
-            <Header />
-            <AnimRoutes/>
-            <Footer />
+                <Header />
+                <AnimRoutes/>
+                <Footer />
             </Router>
         </>
     );
