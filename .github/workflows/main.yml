@@ -23,6 +23,7 @@ jobs:
         REACT_APP_CONTENT_DELIVERY_TOKEN: ${{ secrets.REACT_APP_CONTENT_DELIVERY_TOKEN }}
         REACT_APP_REACT_APP_CONTENT_PREVIEW_TOKEN: ${{ secrets.REACT_APP_CONTENT_PREVIEW_TOKEN }}
         REACT_APP_SPACE_ID: ${{ secrets.REACT_APP_SPACE_ID }}
+        CI: ''
 
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
