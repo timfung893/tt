@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - building-wed
+      - gh-pages
 
 jobs:
   build:
