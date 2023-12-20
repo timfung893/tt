@@ -1,7 +1,7 @@
 {
   "name": "weddd",
   "version": "0.1.0",
-  "homepage": "https://timfung893.github.io/",
+  "homepage": "https://timfung893.github.io/tt",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
