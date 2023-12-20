@@ -50,7 +50,7 @@ function Hero({headerHeight}) {
     
     return (
       <>
-        <section className="hero" id='home'>
+        <section className="hero" id='home' data-aos="fade">
             <ReactPlayer 
             id="bgVid"
             url='videos/bg.mp4'

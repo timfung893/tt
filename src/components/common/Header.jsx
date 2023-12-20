@@ -15,8 +15,12 @@ function Header(props) {
         // rect.right <= (window.innerWidth || document.documentElement.clientWidth);
 
         header.classList.toggle('active', this.window.scrollY > 70)
-        hero.classList.toggle('is-trans', this.window.scrollY > 70)
-        story.classList.toggle('active', this.window.scrollY > 70)
+        if (hero && hero.length) {
+            hero.classList.toggle('is-trans', this.window.scrollY > 70)
+        }
+        if (story && story.length) {
+            story.classList.toggle('active', this.window.scrollY > 70)
+        }
 
         // if (isInViewPort && this.window.scrollY < 70) {
         //     story.scrollIntoView()    
