@@ -39,7 +39,6 @@ button,
 li {
   @include default;
 }
-
 .button {
   @include width(150px, 40px, linear-gradient(90deg, $primary 40%, #F62682 100%), $white, 40px, none);
   @include flex(center, center, center);
@@ -53,15 +52,16 @@ section {
   &.gallery {
     padding: 0;
   }
+  &.location {
+    padding: 15px 0;
+  }
 }
-
 p {
   color: $blue;
   opacity: 0.7;
   font-size: $md;
   font-family: 'Kudryashev', serif;
 }
-
 h2 {
   font-family: "UVFAmplify";
 }
@@ -82,8 +82,8 @@ h2 {
     font-family: "UVFAmplify";
   }
 }
-.product_items {
-  @include grid(repeat(2, 1fr), 30px);
+.photos{
+  // @include grid(repeat(2, 1fr), 30px);
   .box {
     cursor: pointer;
     display:flex;
@@ -113,7 +113,7 @@ h2 {
     }
     .overlay {
       @include flex(center, center, center);
-      @include positions(absolute, none, $xl-4, 0, none, 100%, auto);
+      @include positions(absolute, none, 10%, 0, none, 100%, auto);
       opacity: 0;
       @include transition;
       transform: translateY(0);
@@ -177,9 +177,14 @@ footer {
       z-index: 99999;
     }
     .button {
-      @include positions(absolute, 6%, none, none, 0%, none, none);
-      @include width(40px, 40px, linear-gradient(90deg, $primary 20%, #aea7aae9 100%), $text, 0px 0 0px 24px, none);
+      @include positions(absolute, 6%, none, none, 0%, rgba(55,55,55, .5), none);
+      @include width(40px, 40px, none, white, 0px 0 0px 24px, none);
       z-index: 999999;
+      font-size: 18px;
+      transition: all .25s ease;
+      &:hover {
+        box-shadow: 0 0 3px white ;
+      }
     }
     &::after {
       content: "";
@@ -214,6 +219,10 @@ footer {
     }
   }
 
+  .slick-arrow {
+    display: none !important;
+  }
+
   // .slick-prev, .slick-next {
   //   font-size: 35px;
   //   width: 40px;
@@ -238,4 +247,11 @@ footer {
   mix-blend-mode: color;
   width: 100%;
   height: 100%;
+}
+
+.card-section {
+  background-attachment: fixed;
+  &.scroll {
+    background-attachment: scroll;
+  }
 }

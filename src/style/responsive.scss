@@ -3,31 +3,62 @@
     .toggle {
       display: block;
       margin-right: 230%;
+      z-index: 999;
       .close {
         @include positions(absolute, 20px, none, 40%, none, 50px, 50px);
         @include width(40px, 40px, $white, $primary, 50%, 8px);
         z-index: 999999;
       }
+      .bar {
+        width: 15px;
+        height: 2px;
+        color: $text;
+        background: #0a2748;
+        margin-bottom: 2px;
+        transition: all 0.3s ease-in-out;
+        transform-origin: 1.8px;
+
+        &.two {
+          opacity: 1;
+        }
+        &.one.active {
+          transform: rotate(45deg);
+        }
+        &.two.active {
+          opacity: 0;
+        }
+        &.three.active {
+          transform: rotate(-45deg);
+        }
+      }
     }
     .center {
+      z-index: 998;
       ul {
-        display: none;
         transition: all .3s ease-in-out;
+        -webkit-transition: all .3s ease-in-out;
+        position: fixed;
       }
-
+      .menu {
+        opacity: 0;
+        visibility: hidden;
+      }
       .mobile-nav {
         display: block;
-        @include positions(absolute, 0, none, -50px, none, none, none);
-        @include width(400px, 100vh, $light, $white, 0, 0);
+        opacity: 1;
+        visibility: visible;
+        @include positions(fixed, 0, none, -50px, none, none, none);
+        @include width(400px, 100vh, $light, $white, 0, null);
         padding: $large 0;
         z-index: 99999;
 
         li {
           margin-top: $xl;
           a {
-            color: $dark;
             margin-bottom: $md;
             font-size: $xl-2;
+            color: $heading;
+            text-transform: lowercase;
           }
         }
       }
@@ -65,8 +96,8 @@
   }
   .topproduct,
   .product {
-    .product_items {
-      @include grid(repeat(2, 1fr), 30px);
+    .photos {
+      // @include grid(repeat(2, 1fr), 30px);
     }
   }
   .topproduct {
@@ -108,7 +139,7 @@
 @include media-sm {
   section {
     padding: 15px 30px !important;
-    &.storyslider {
+    &.storyslider, &.location {
       padding: 15px 0 !important;
     }
   }
@@ -122,7 +153,7 @@
       margin-right: 80%;
       .close {
         color: #312620;
-        left: 80%;
+        left: 70%;
       }
     }
   }
@@ -130,15 +161,24 @@
   .cardmain {
     .card-story {
       font-size: 40px;
-      top: -20%;
+      top: -14%;
     }
 
     .card-container {
       flex-direction: column;
 
       .center {
-        margin: 20vh 0 20vh 0;
+        margin: 5px;
+        height: 250px;
+        filter: hue-rotate();
       }
+    }
+
+    .name {
+      background: rgba($color: $light, $alpha: .7);
+      border-radius: 30px;
+      padding: 15px;
+      height: fit-content;
     }
   }
 
@@ -165,8 +205,13 @@
   }
 
   .gallery {
-    .product_items {
-      grid-template-columns: repeat(2, 1fr);
+    .photos {
+      // grid-template-columns: repeat(2, 1fr);
+      .box {
+        .overlay {
+          @include positions(absolute, none, -4%, 0, none, 100%, auto);
+        }
+      }
     }
     .onClickImage {
       .button {

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { products } from '../../assets/data/data';
 import Heading from '../../common/Heading';
-import ProductItem from './ProductItem';
+import PhotoCell from './PhotoCell';
+import { Masonry } from 'masonic';
 
 
 function Gallery(props) {
@@ -9,10 +10,17 @@ function Gallery(props) {
 
     return (
         <>
-            <section className="gallery" id='gallery' data-aos="fade-right">
+            <section className="gallery" id='gallery'>
                 <div className="container">
                     <Heading title='Ảnh' desc='Cho mọi người xem chơi...' />
-                    <ProductItem data={data} />
+                    <Masonry className="photos"
+                        items={data.slice(6, undefined)}
+                        columnGutter={8}
+                        columnWidth={150}
+                        columnCount={3}
+                        overscanBy={32}
+                        render={PhotoCell}
+                    />
                     <Heading title='' desc='Còn nữa, nhưng để dành nha keke...' />
                 </div>
             </section>

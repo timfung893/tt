@@ -1,25 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import { BiSearch } from "react-icons/bi";
-import SearchItems from './SearchItems';
-import { products } from '../../assets/data/data';
+import React, { useLayoutEffect, useEffect, useState } from 'react';
+import ReactPlayer from 'react-player';
 
-function Hero(props) {
-    const [value, setValue] = useState('')
-    const onChange = (e) => {
-        setValue(e.target.value)
-    }
-    const onSearch = (key) => {
-        setValue(key)
-        console.log('search', key);
+
+function Hero({headerHeight}) {
+    // const [value, setValue] = useState('')
+    // const onChange = (e) => {
+        //     setValue(e.target.value)
+        // }
+        // const onSearch = (key) => {
+            //     setValue(key)
+            //     console.log('search', key);
+            // }
+
+    const [headerH, setHeaderHeight] = useState(0)
+    const setHeroTop =  () => {
+        // const header = document.querySelector('.header');
+        const hero = document.querySelector('.hero');
+        const headerHeightData = 94;
+        setHeaderHeight(headerHeightData)
+        hero.style.top =  '-' + headerHeightData + 'px'
     }
     
-    const setHeroTop =  () => {
-        const header = document.querySelector('header.header');
-        const hero = document.querySelector('.hero');
-        const headerHeight = header.offsetHeight + 30;
-        hero.style.top =  '-' + headerHeight + 'px'
-    }
-
     const showHeroHeading = () => {
         const hero = document.querySelector('.hero-heading')
         const hero2 = document.querySelector('.hero-heading-2')
@@ -35,21 +36,30 @@ function Hero(props) {
         }, 2000);   
     }
 
-    document.addEventListener('click', () => {
-        document.getElementById('mungJungYan').play()
-    }, { once: true } )
-    
-    useEffect(() => {
+    // document.addEventListener('click', () => {
+    //     document.getElementById('mungJungYan').play()
+    // }, { once: true } )
+
+    useLayoutEffect(() => {
         showHeroHeading()
         setHeroTop()
+        document.onreadystatechange = () => {
+            setHeroTop()
+        }
     },[])
-
+    
     return (
-      <>    
-        <section className="hero" id='home'>
-            <video autoPlay muted loop>
-                <source src='videos/bg.mp4' type='video/mp4'/>
-            </video>
+      <>
+        <section className="hero" id='home' data-aos="fade">
+            <ReactPlayer 
+            id="bgVid"
+            url='videos/bg.mp4'
+            playing
+            playsinline={true}
+            loop={true}
+            volume={null}
+            controls={null}
+            muted={true}/>
             <audio controls autoPlay id='mungJungYan'>
                 <source src="music/mjyan.mp3" type="audio/mpeg" />
             </audio>

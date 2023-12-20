@@ -17,7 +17,7 @@ function WeddDetails(props) {
             const seconds = Math.floor((distance % (1000 * 60)) / 1000)
             
             document.querySelector('.countdown').innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s "
+            + minutes + "m " + seconds + "s"
     
             if (distance < 0) {
                 clearInterval(interval)
@@ -32,15 +32,15 @@ function WeddDetails(props) {
 
     return (
         <>
-            <section className="weddetails">
+            <section className="weddetails card-section">
                 <div className="overlay-bg"></div>
                 <Heading title='Đám Cưới' desc=''/>
-                <p className='message'>Buổi tiệc cưới sẽ diễn ra sớm hơn thông thường một chút - vào lúc 6 giờ tối. Mọi người chịu khó đến đúng giờ nhé!</p>
+                <p className='message'>Tiệc cưới sẽ diễn ra sớm hơn thông thường một chút - vào lúc 6 giờ tối. Mọi người chịu khó đến đúng giờ nhé!</p>
                 <div className="wed-wrapper">
                     <div className="wed-info">
                         <div className="left">
                             <h2>Lúc</h2>
-                            <p>24 tháng 12 2022, 6:00 PM</p>
+                            <p>24 tháng 12 2022, <br /> 6:00 PM</p>
                         </div>
                         <div className="img">
                             <img src="../images/hero/flower.webp" alt="" />
@@ -49,7 +49,7 @@ function WeddDetails(props) {
                             <h2>Tại</h2>
                             <p>Pergola<br /> 
                             28A Trần Cao Vân, Phường 12, <br />
-                            Phú Nhuận, Thành phố Hồ Chí Minh</p>
+                            Quận Phú Nhuận, Thành phố Hồ Chí Minh</p>
                         </div>
                     </div>
                 </div>

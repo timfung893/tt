@@ -9,27 +9,11 @@ import "slick-carousel/slick/slick-theme.css";
 function Story(props) {
     const [data, setData] = useState(products)
 
-    function SampleNextArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-            <button class="slick-next" aria-label="Next" type="button" >
-                <SlArrowRight/>
-            </button>
-        );
-    }
-      
-    function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <button class="slick-prev" aria-label="Previous" type="button" >
-            <SlArrowLeft/>
-        </button>
-    );
-    }
     const settings = {
         dots: true,
+        fade:true,
+        ladyLoad:true,
         infinite: true,
-        arrows: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,

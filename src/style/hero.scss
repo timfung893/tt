@@ -16,7 +16,7 @@
       height: 100%;
       bottom: -1%;
       left: 0;
-      background: linear-gradient(to bottom,rgba(255,255,255,0) 0%,$primary 100%);
+      background: linear-gradient(to bottom,rgba(255,255,255,0) 0%,white 100%);
       opacity: 1;
       transition: all 0.2s;
       z-index: 1;
@@ -47,12 +47,12 @@
     opacity: .1;
   }
 
-  video {
+  video, #bgVid {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     object-fit: cover;
     opacity: 0.8;
   }

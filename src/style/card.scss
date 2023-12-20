@@ -16,7 +16,7 @@
   position: relative;
   opacity: 0;
   margin-top: 50px;
-  background: url('../../public/images/banner/bg-card.jpeg') fixed center/cover no-repeat;
+  background: url('../../public/images/banner/bg-card.jpeg') center/cover no-repeat;
   @include transition;
   @include flex(center, space-between,column);
   
@@ -121,10 +121,11 @@
   flex-direction: column;
   padding: 15px 0;
   margin-top: 50px;
-  background: url('../../public/images/hero/white-bouquet.webp') fixed center/cover no-repeat;
+  background: url('../../public/images/hero/white-bouquet.webp') center/cover no-repeat;
   min-height: 500px;
   .message {
     margin: 20px 0;
+    font-size: 18px;
   }
   .wed-wrapper {
     display:flex;
@@ -152,6 +153,7 @@
 
       p {
         text-align: center;
+        font-size: 18px;
       }
       h2 {
         margin-bottom: 40px;
@@ -171,7 +173,7 @@
 // celebrate
 .celebrate {
   margin-top: 50px;
-  background: url('../../public/images/hero/fl-bg4.jpg') fixed center/cover no-repeat;
+  background: url('../../public/images/hero/fl-bg4.jpg') center/cover no-repeat;
   min-height: 500px;
   position: relative;
   .heading  {

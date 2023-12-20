@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import $ from 'jquery'; 
 import logo from '../assets/images/icon.png';
-import { AiOutlineHeart, AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
-import { navlist } from '../assets/data/data';
-import { Link } from 'react-router-dom';
 import { connect, useDispatch, useSelector } from 'react-redux';
 
 function Header(props) {
@@ -18,8 +15,12 @@ function Header(props) {
         // rect.right <= (window.innerWidth || document.documentElement.clientWidth);
 
         header.classList.toggle('active', this.window.scrollY > 70)
-        hero.classList.toggle('is-trans', this.window.scrollY > 70)
-        story.classList.toggle('active', this.window.scrollY > 70)
+        if (hero && hero.length) {
+            hero.classList.toggle('is-trans', this.window.scrollY > 70)
+        }
+        if (story && story.length) {
+            story.classList.toggle('active', this.window.scrollY > 70)
+        }
 
         // if (isInViewPort && this.window.scrollY < 70) {
         //     story.scrollIntoView()    
@@ -27,42 +28,25 @@ function Header(props) {
 
     })
 
+    function scrollToSection(id, sectionId) {
+        $(id).click(() => {
+            $("html, body").animate(
+              {
+                scrollTop: $(sectionId).offset().top,
+              },
+              1000
+            );
+            setMobile(false);
+        });
+    }
+
     const scrollOnClick = () => {
-        $(".home").click(() => {
-            $("html, body").animate(
-              {
-                scrollTop: $("#home").offset().top,
-              },
-              1000
-            );
-        });
-        $(".ourstory").click(() => {
-            $("html, body").animate(
-              {
-                scrollTop: $("#ourstory").offset().top - 200,
-              },
-              1000
-            );
-        });
-        $(".link.gallery").click(() => {
-            $("html, body").animate(
-              {
-                scrollTop: $("#gallery").offset().top,
-              },
-              1000
-            );
-        });
-        $(".location").click(() => {
-            $("html, body").animate(
-              {
-                scrollTop: $("#location").offset().top,
-              },
-              1000
-            );
-        });
+        scrollToSection(".home", "#home");
+        scrollToSection(".ourstory", "#ourstory");
+        scrollToSection(".link.gallery", "#gallery");
+        scrollToSection(".location", "#location");
     };
 
-    
     // set state for mobile menu
     const [mobile, setMobile] = useState(false);
 
@@ -76,13 +60,15 @@ function Header(props) {
                 <nav className='menu-wrapper'>
                     <div className="toggle">
                         <button onClick={() => setMobile(!mobile)}>
-                            {mobile ? <AiOutlineClose className='close heIcon'/> : <AiOutlineMenu className='open heIcon'/>}
+                            <div className={mobile ? 'bar one active' : 'bar one'}></div>
+                            <div className={mobile ? 'bar two active' : 'bar two'}></div>
+                            <div className={mobile ? 'bar three active' : 'bar three'}></div>
                         </button>
                     </div>
                     <div className="left">
                         <img src={logo} alt="" />
                     </div>
-                    <div className="center">
+                    <div className={mobile ? 'center open' : 'center'}>
                         <ul className={mobile ? 'mobile-nav' : 'menu'}>
                             <li>
                                 <a href='#home' className='link home'>home</a>
