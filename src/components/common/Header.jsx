@@ -15,10 +15,10 @@ function Header(props) {
         // rect.right <= (window.innerWidth || document.documentElement.clientWidth);
 
         header.classList.toggle('active', this.window.scrollY > 70)
-        if (hero && hero.length) {
+        if (hero) {
             hero.classList.toggle('is-trans', this.window.scrollY > 70)
         }
-        if (story && story.length) {
+        if (story) {
             story.classList.toggle('active', this.window.scrollY > 70)
         }
 
