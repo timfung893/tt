@@ -50,7 +50,7 @@ function Hero({headerHeight}) {
     
     return (
       <>
-        <section className="hero" id='home' data-aos="fade">
+        <section className="hero" id='home'>
             <ReactPlayer 
             id="bgVid"
             url='videos/bg.mp4'
@@ -59,7 +59,9 @@ function Hero({headerHeight}) {
             loop={true}
             volume={null}
             controls={null}
-            muted={true}/>
+            muted={true}
+            data-aos="fade"
+            />
             <audio controls autoPlay id='mungJungYan'>
                 <source src="music/mjyan.mp3" type="audio/mpeg" />
             </audio>
