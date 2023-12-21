@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import $ from 'jquery'; 
 import logo from '../assets/images/icon.png';
 import { connect, useDispatch, useSelector } from 'react-redux';
+import { Link } from "react-router-dom";
 
 function Header(props) {
     window.addEventListener('scroll', function (e) {
@@ -81,6 +82,9 @@ function Header(props) {
                             </li>
                             <li>
                                 <a href='#location' className='link location'>địa điểm</a>
+                            </li>
+                            <li>
+                                <Link to={`/tt/trips`}>ăn chơi</Link>
                             </li>
                         </ul>
                     </div>

@@ -3,7 +3,7 @@ import Pages from './components/home/pages/Pages';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 // import Home from '../Home';
-import { BrowserRouter as Router } from 'react-router-dom'
+import { Outlet, BrowserRouter as Router } from 'react-router-dom'
 import AnimRoutes from './components/home/AnimRoutes';
 import AOS from 'aos';
 import './style/main.scss';
@@ -24,11 +24,10 @@ function App() {
   
   return (
     <>
-      <Router>
-        <Header />
-        <AnimRoutes/>
-        <Footer />
-      </Router>
+      <Header />
+      {/* <AnimRoutes/> */}
+      <Outlet/>
+      <Footer />
     </>
   );
 }
