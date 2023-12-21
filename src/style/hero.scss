@@ -7,8 +7,8 @@
   z-index: 5;
   @include transition;
   &.is-trans {
-    transform: translateY(-25%);
-    -webkit-transform: translateY(-25%);
+    transform: translateY(-25%) !important;
+    -webkit-transform: translateY(-25%) !important;
     &::after {
       content: '';
       position: absolute;
