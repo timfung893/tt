@@ -25,8 +25,24 @@ function Trips(props) {
     return (
         <>
             <section className="gallery" id='gallery'>
+
+                {/* SG-QN 2023 */}
                 <div className="container">
                     <Heading title='Sài Gòn - Quảng Ngãi' desc='Về quê ăn tết 2023...' />
+                    <Masonry className="photos"
+                        items={data}
+                        columnGutter={8}
+                        columnWidth={150}
+                        columnCount={3}
+                        overscanBy={32}
+                        render={PhotoCell}
+                    />
+                    <Heading title='' desc='Còn nữa, nhưng để dành nha keke...' />
+                </div>
+
+                {/* SG-QuN 2023 */}
+                <div className="container">
+                    <Heading title='Sài Gòn - Qui Nhơn' desc='Về quê chơi, cũng 2023...' />
                     <Masonry className="photos"
                         items={data}
                         columnGutter={8}
