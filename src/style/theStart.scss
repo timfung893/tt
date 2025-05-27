@@ -1,0 +1,37 @@
+#theStart {
+  img {
+    width: 60px;
+    max-width: 60px;
+    border-radius: 10px;
+  }
+
+  .sms-body {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .body-details {
+      display: flex;
+      flex-direction: column;
+      .sms-name {
+        color: rgb(77, 116, 128);
+;
+      }
+    }
+  }
+
+  .sms-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .sms-date {
+    color: gray;
+    font-size: 1.25rem;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+}

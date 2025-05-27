@@ -105,6 +105,9 @@ function Header(props) {
                             <li>
                                 <Link to={`/tt/trips`}>ăn chơi</Link>
                             </li>
+                            <li>
+                                <Link to={`/tt/thestart`}>nơi bắt đầu</Link>
+                            </li>
                         </ul>
                     </div>
                 </nav>
