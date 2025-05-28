@@ -1,7 +1,12 @@
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import Pages from './components/home/pages/Pages';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
+import Trips from './components/home/trips/Trips';
+import TheStart from './components/home/theStart/TheStart';
+import Home from './components/home/Home';
+
 // import Home from '../Home';
 import { Outlet, BrowserRouter as Router } from 'react-router-dom'
 import AnimRoutes from './components/home/AnimRoutes';
@@ -21,7 +26,7 @@ function App() {
     AOS.init();
     AOS.refresh();
   }, [])
-  
+
   return (
     <>
       <Header />

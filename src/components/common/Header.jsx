@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from 'react-router-dom';
+
 import $ from "jquery";
 import logo from "../assets/images/icon.png";
 import { connect, useDispatch, useSelector } from "react-redux";
@@ -36,8 +38,8 @@ function Header(props) {
                 },
                 1000
             );
-            setMobile(false);
         });
+        setMobile(false);
     }
 
     const scrollOnClick = () => {
@@ -49,10 +51,21 @@ function Header(props) {
 
     // set state for mobile menu
     const [mobile, setMobile] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
-        scrollOnClick();
-    }, []);
+        // scrollOnClick();
+
+        const sectionId = location.hash?.replace("#", "");
+        if (sectionId) {
+            const el = document.getElementById(sectionId);
+            if (el) {
+                setTimeout(() => {
+                    el.scrollIntoView({ behavior: "smooth" });
+                }, 100); // slight delay ensures DOM is ready
+            }
+        }
+    }, [location]);
 
     return (
         <header className="header">
@@ -83,30 +96,65 @@ function Header(props) {
                     <div className={mobile ? "center open" : "center"}>
                         <ul className={mobile ? "mobile-nav" : "menu"}>
                             <li>
-                                <a href="#home" className="link home">
+                                {/* <a href="#home" className="link home">
                                     home
-                                </a>
+                                </a> */}
+                                <Link to={`/`} onClick={() => setMobile(false)}>home</Link>
                             </li>
                             <li>
-                                <a href="#ourstory" className="link ourstory">
+                                {/* <a href="#ourstory" className="link ourstory">
                                     chủ xị
-                                </a>
+                                </a> */}
+                                <Link
+                                    to={`/#ourstory`}
+                                    onClick={() =>
+                                        scrollToSection(
+                                            ".ourstory",
+                                            "#ourstory"
+                                        )
+                                    }
+                                >
+                                    chủ xị
+                                </Link>
                             </li>
                             <li>
-                                <a href="#gallery" className="link gallery">
+                                {/* <a href="#gallery" className="link gallery">
                                     ảnh
-                                </a>
+                                </a> */}
+                                <Link
+                                    to={`/#gallery`}
+                                    onClick={() =>
+                                        scrollToSection(
+                                            ".link.gallery",
+                                            "#gallery"
+                                        )
+                                    }
+                                >
+                                    ảnh
+                                </Link>
                             </li>
                             <li>
-                                <a href="#location" className="link location">
+                                {/* <a href="#location" className="link location">
                                     địa điểm
-                                </a>
+                                </a> */}
+
+                                <Link
+                                    to={`/#location`}
+                                    onClick={() =>
+                                        scrollToSection(
+                                            ".link.location",
+                                            "#location"
+                                        )
+                                    }
+                                >
+                                    địa điểm
+                                </Link>
                             </li>
                             <li>
-                                <Link to={`/tt/trips`}>ăn chơi</Link>
+                                <Link to={`/trips`} onClick={() => setMobile(false)}>ăn chơi</Link>
                             </li>
                             <li>
-                                <Link to={`/tt/thestart`}>nơi bắt đầu</Link>
+                                <Link to={`/thestart`} onClick={() => setMobile(false)}>nơi bắt đầu</Link>
                             </li>
                         </ul>
                     </div>
